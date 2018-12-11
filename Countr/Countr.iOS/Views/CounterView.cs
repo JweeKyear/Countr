@@ -10,7 +10,8 @@ using MvvmCross.Binding.BindingContext;
 
 namespace Countr.iOS.Views
 {
-    public partial class CounterView : MvxViewController
+    [MvxFromStoryboard]
+    public partial class CounterView : MvxViewController<CounterViewModel>
     {
         public CounterView(IntPtr handle) : base(handle)
         {

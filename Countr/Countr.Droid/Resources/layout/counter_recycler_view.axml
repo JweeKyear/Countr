@@ -22,7 +22,8 @@
 		android:layout_alignParentLeft="true"
 		android:layout_marginLeft="20dp"
 		android:textSize="16sp"
-		local:MvxBind="Text Name"/>
+		local:MvxBind="Text Name"
+		android:id="@+id/counter_name"/>
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -30,5 +31,6 @@
 		android:layout_toLeftOf="@id/add_image"
 		android:layout_marginRight="20dp"
 		android:textSize="16sp"
-		local:MvxBind="Text Count"/>
+		local:MvxBind="Text Count"
+		android:id="@+id/counter_count"/>
 </RelativeLayout>

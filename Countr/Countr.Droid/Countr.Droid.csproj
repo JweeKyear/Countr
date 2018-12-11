@@ -39,6 +39,11 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.2.2" />
@@ -48,9 +53,6 @@
     <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView" Version="6.2.2" />
     <PackageReference Include="MvvmCross.Plugin.Messenger">
       <Version>6.2.2</Version>
-    </PackageReference>
-    <PackageReference Include="PCLStorage">
-      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.Annotations" Version="27.0.2.1" />

@@ -35,11 +35,12 @@ namespace Countr.iOS.Views
 
             var source = new CountersTableViewSource(TableView);
             TableView.Source = source;
-
-            var set = this.CreateBindingSet<CountersView, CountersViewModel>();
+            
             var button = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+            button.AccessibilityIdentifier = "add_counter_button";
             NavigationItem.SetRightBarButtonItem(button, false);
 
+            var set = this.CreateBindingSet<CountersView, CountersViewModel>();
             set.Bind(source).To(vm => vm.Counters);
             set.Bind(button).To(vm => vm.ShowAddNewCounterCommand);
             set.Apply();
