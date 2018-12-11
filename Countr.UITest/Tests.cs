@@ -41,7 +41,7 @@ namespace Countr.UITest
             app.Tap(c => c.Id("add_counter_button"));
             app.Screenshot("About to enter text");
             app.EnterText(c => c.Id("new_counter_name"), "My Counter");
-            app.Tap(c => c.Text("Done"));
+            app.Tap(c => c.Text("Done")); 
             // Assert
             app.WaitForElement(c => c.Id("counter_name").Text("My Counter"));
             app.WaitForElement(c => c.Id("counter_count").Text("0"));
