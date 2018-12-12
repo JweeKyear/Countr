@@ -5,6 +5,7 @@ using Countr.Core.Repositories;
 using System.Threading.Tasks;
 using Countr.Core.Models;
 using MvvmCross.Plugin.Messenger;
+using Microsoft.AppCenter.Analytics;
 
 namespace Countr.Core.Services
 {
@@ -25,6 +26,11 @@ namespace Countr.Core.Services
             await repository.Save(counter).ConfigureAwait(false);
 
             messenger.Publish(new CountersChangedMessage(this));
+
+            var props = new Dictionary<string, string>();
+            props.Add("Counter Name", name);
+            Analytics.TrackEvent("Add new counter", props);
+
             return counter;
         }
 

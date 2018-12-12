@@ -1,6 +1,9 @@
 using Android.App;
 using Android.Content.PM;
 using MvvmCross.Platforms.Android.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Countr.Droid
 {
@@ -13,9 +16,16 @@ namespace Countr.Droid
         , ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
     {
-        public SplashScreen()
-            : base(Resource.Layout.SplashScreen)
+        public SplashScreen(): base(Resource.Layout.SplashScreen)
         {
+        }
+
+        protected override void OnCreate(Android.OS.Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            AppCenter.Start("c9e5e13a-df58-4376-94ee-bca4719a6885",
+                   typeof(Analytics), typeof(Crashes));
         }
     }
 }
