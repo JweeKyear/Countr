@@ -4,6 +4,7 @@ using MvvmCross.Platforms.Android.Views;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
 
 namespace Countr.Droid
 {
@@ -25,7 +26,7 @@ namespace Countr.Droid
             base.OnCreate(bundle);
 
             AppCenter.Start("c9e5e13a-df58-4376-94ee-bca4719a6885",
-                   typeof(Analytics), typeof(Crashes));
+                   typeof(Analytics), typeof(Crashes),typeof(Distribute));
         }
     }
 }
